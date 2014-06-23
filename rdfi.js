@@ -133,7 +133,7 @@ rdf = (function() {
   rdf.Triple = function(s,p,o) {
     return Object.defineProperties( {}, {
       subject: { writable: false, configurable : false, enumerable: true, value: s },
-      property: { writable: false, configurable : false, enumerable: true, value: p },
+      predicate: { writable: false, configurable : false, enumerable: true, value: p },
       object: { writable: false, configurable : false, enumerable: true, value: o },
       equals: { writable: true, configurable : false, enumerable: true, value: function(t) {
         return this.s.equals(t.s) && this.p.equals(t.p) && this.o.equals(t.o);
@@ -142,7 +142,7 @@ rdf = (function() {
         return this.s.toNT() + " " + this.p.toNT() + " " + this.o.toNT() + " .";
       }},
       s: { configurable : false, enumerable: false, get: function() { return this.subject } },
-      p: { configurable : false, enumerable: false, get: function() { return this.property } },
+      p: { configurable : false, enumerable: false, get: function() { return this.predicate } },
       o: { configurable : false, enumerable: false, get: function() { return this.object } }
     })
   };
@@ -379,7 +379,7 @@ rdf = (function() {
       createTriple: { writable: false, configurable : false, enumerable: true, value: function(s,p,o) {
         return new rdf.Triple(s,p,o);
       }},
-      createGraph: { writable: false, configurable : false, enumerable: true, value: function(a) {
+      createGraph: { writable: false, configurable : true, enumerable: true, value: function(a) {
         return new rdf.Graph(a);
       }},
       createAction: { writable: false, configurable : false, enumerable: true, value: function(t,a) {
@@ -403,5 +403,5 @@ rdf = (function() {
   return rdf = _;
 })();
 
-if(module) module.exports = rdf; 
+if(typeof module != "undefined") module.exports = rdf; 
 

@@ -1,0 +1,20 @@
+{
+	"name": "rdf-interfaces",
+	"version": "0.1.0",
+	"description": "Implementation of the Core RDF Interfaces in ECMAScript-262 V5 (Javascript)",
+	"main": "rdfi.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/webr3/rdf-interfaces.git"
+	},
+	"keywords": [
+		"RDF Interfaces"
+	],
+	"author": "webr3",
+	"license": "Public domain",
+	"bugs": {
+		"url": "https://github.com/webr3/rdf-interfaces/issues"
+	},
+	"homepage": "https://github.com/webr3/rdf-interfaces",
+	"readmeFilename": "README.md"
+}
