@@ -183,7 +183,7 @@ rdf = (function() {
         this.forEach(function(t,g) {
           (s===null||t.s.equals(s)) && (p===null||t.p.equals(p)) && (o===null||t.o.equals(o)) && r.push(t);
         });
-        for(i in r) this.remove(r[i]);
+        for(var i in r) this.remove(r[i]);
         return this;
       }},
       toArray: { writable: false, configurable : false, enumerable: true, value: function() {
