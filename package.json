@@ -16,5 +16,8 @@
 		"url": "https://github.com/webr3/rdf-interfaces/issues"
 	},
 	"homepage": "https://github.com/webr3/rdf-interfaces",
-	"readmeFilename": "README.md"
+	"readmeFilename": "README.md",
+	"devDependencies": {
+		"mocha": "^2.2.5"
+    }
 }
